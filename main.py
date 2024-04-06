@@ -22,9 +22,11 @@ def create_qr_code():
     img.save(image_name_string)
 
     # Replace image with the newly created QR code image
-    img = ImageTk.PhotoImage(Image.open(image_name_string))
-    image_area.configure(image=img)
-    image_area.image = img
+    image = Image.open(image_name_string)
+    image = ImageOps.fit(image, (300, 300))
+    image = ImageTk.PhotoImage(image)
+    image_area.configure(image=image)
+    image_area.image = image
 
     # Change status text
     status_text = "QR created with name: " + image_name_string
