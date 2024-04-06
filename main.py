@@ -35,7 +35,7 @@ def create_qr_code():
 # Create window, set size and window title
 window = tk.Tk()
 window.title("Parrot QR Creator")
-window.geometry("400x550")
+window.geometry("400x600")
 
 # Image file
 image = Image.open("res/placeholder-image.jpg")
@@ -44,13 +44,13 @@ image = ImageTk.PhotoImage(image)
 
 # Input text
 content_label = tk.Label(window, text="Text to embed:", font=('Arial', 15), height = 1)
-content_label.pack(side="top", pady=10)
-content_field = tk.Entry(window)
-content_field.pack(side="top")
+content_label.pack(side="top", pady=20)
+content_field = tk.Entry(window, width=50)
+content_field.pack(side="top",)
 
 # Start button
 start_button = tk.Button(window, text="Create QR code", font=('Arial', 15), command=lambda: th.Thread(target=create_qr_code).start(), height = 1, width = 15)
-start_button.pack(side="top", pady=10)
+start_button.pack(side="top", pady=20)
 
 # Latest QR code or placeholder image
 image_area = tk.Label(window, image = image, bg="#11a3a7")
