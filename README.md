@@ -1,16 +1,20 @@
-# Parrot QR creator
+# Parrot QR Creator
 
 Easy QR creator with GUI. Created with Python's Tkinter.
 
 ## User installation
 
-No 1.0 user version release yet.
+Download zip from Releases and extract it into folder of your choice.
+
+Launch program by double clicking Parrot QR Creator.
+
+Generated QR code images are saved into "QR-codes" folder in the same folder where executable is.
 
 ## How to use
 
-Input text you want to inculde in the QR-code and press "Create QR code" button. You can embed any text into the code, not just url links.
+Input text you want to inculde in the QR code and press "Create QR code" button. You can embed any text into the code, not just url links.
 
-QR-codes are saved into "QR-codes" folder in the program root folder.
+QR codes are saved into "QR-codes" folder in the program root folder.
 
 ## Installing and running project
 
