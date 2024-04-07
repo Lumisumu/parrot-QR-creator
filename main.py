@@ -9,6 +9,10 @@ import time
 import datetime
 
 def create_qr_code():
+    # If target save folder does not exist, create it
+    if not os.path.exists("QR-codes"):
+        os.makedirs("QR-codes")
+
     # Create QR code
     img = qr.make(content_field.get())
 
