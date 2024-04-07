@@ -40,6 +40,7 @@ def create_qr_code():
 window = tk.Tk()
 window.title("Parrot QR Creator")
 window.geometry("400x600")
+window.iconbitmap("res/parrot-icon.ico")
 
 # Image file
 image = Image.open("res/placeholder-image.jpg")
