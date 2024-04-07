@@ -1,6 +1,6 @@
 # Parrot QR Creator
 
-Easy GUI for creating QR codes quickly. Codes are saved as PNG image files for easy reuse. Created with Python's Tkinter.
+Easy GUI for creating QR codes quickly. Codes are saved as PNG image files for easy editing and reuse. Created with Python's Tkinter.
 
 ## User installation
 
