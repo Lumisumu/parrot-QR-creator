@@ -42,7 +42,7 @@ def create_qr_code():
 
     # Change status text
     status_text = "QR created with name: " + "QR-" + date_string + ".png"
-    content_label.configure(text=status_text)
+    image_note_label.configure(text=status_text)
 
 def choose_code_color():
     global code_color
@@ -67,38 +67,33 @@ image = ImageOps.fit(image, (300, 300))
 image = ImageTk.PhotoImage(image)
 
 # Empty space
-empty_label = tk.Label(window, text="")
-empty_label.pack(side="top", pady=1)
+empty_label = tk.Label(window, text="").pack(side="top", pady=1)
 
 # Input text
-content_label = tk.Label(window, text="Text to embed:", font=('Arial', 13), height = 1)
-content_label.pack(side="top", pady=5, padx=10)
+content_label = tk.Label(window, text="Text to embed:", font=('Arial', 13), height = 1).pack(side="top", pady=5, padx=10)
 content_field = tk.Entry(window, width=50)
-content_field.pack(side="top",)
+content_field.pack(side="top")
 
 # Code color option
-code_color_label = tk.Label(window, text="Code color:", font=('Arial', 13), height = 1)
-code_color_label.pack(side="top", pady=5)
+code_color_label = tk.Label(window, text="Code color:", font=('Arial', 13), height = 1).pack(side="top", pady=5)
 code_color = "black"
 code_color_button = tk.Button(window, text="Pick code color", command=choose_code_color).pack()
 
 # Background color option
-background_color_label = tk.Label(window, text="Background color:", font=('Arial', 13), height = 1)
-background_color_label.pack(side="top", pady=5)
+background_color_label = tk.Label(window, text="Background color:", font=('Arial', 13), height = 1).pack(side="top", pady=5)
 background_color = "white"
 background_color_button = tk.Button(window, text="Pick background color", command=choose_background_color).pack()
 
 # Start button
-start_button = tk.Button(window, text="Create QR code", font=('Arial', 14), command=lambda: th.Thread(target=create_qr_code).start(), height = 1, width = 15)
-start_button.pack(side="top", pady=20)
+start_button = tk.Button(window, text="Create QR code", font=('Arial', 14), command=lambda: th.Thread(target=create_qr_code).start(), height = 1, width = 15).pack(side="top", pady=20)
 
 # Latest QR code or placeholder image
 image_area = tk.Label(window, image = image, bg="#11a3a7")
 image_area.pack(side="top", pady=10)
 
 # Label for newest image
-content_label = tk.Label(window, text="", font=('Arial', 13), wraplength=300, height = 3)
-content_label.pack(side="top", pady=5)
+image_note_label = tk.Label(window, text="", font=('Arial', 13), wraplength=300, height = 3)
+image_note_label.pack(side="top", pady=5)
 
 # Start process
 window.mainloop()
