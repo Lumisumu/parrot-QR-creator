@@ -6,8 +6,6 @@ Easy GUI for creating QR codes quickly. Codes are saved as PNG image files for e
 
 Download the project and either run it locally or compile it. Sections with instructions are below.
 
-Launch program by double clicking Parrot QR Creator.
-
 ## How to use
 
 Input text you want to inculde in the QR code and press "Create QR code" button. You can embed any text into the code, not just url links.
