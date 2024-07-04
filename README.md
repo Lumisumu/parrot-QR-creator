@@ -4,7 +4,7 @@ Easy GUI for creating QR codes quickly. Codes are saved as PNG image files for e
 
 ## User installation
 
-Download the zip from Releases and extract it into folder of your choice.
+Download the project and either run it locally or compile it. Sections with instructions are below.
 
 Launch program by double clicking Parrot QR Creator.
 
