@@ -9,6 +9,9 @@ import qrcode
 import time
 import datetime
 
+# Set working directory
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 def create_qr_code():
     # If target save folder does not exist, create it
     if not os.path.exists("QR-codes"):
